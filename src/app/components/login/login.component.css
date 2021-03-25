@@ -1,0 +1,99 @@
+.main{
+
+  width: 60%;
+  height: 50rem;
+  display: flex;
+position: absolute;
+top: 5rem;
+left: 25rem;
+background-color:rgba(255, 255, 255, 0.6);
+border-radius: 10px;
+box-shadow:3px 5px rgba(2, 2, 2, 0.5);
+border: 1px black bold;
+}
+.container-fluid{
+ background:
+  linear-gradient(rgba(48,70,89,.6),rgba(48,70,89,.6)),
+  url('../../../assets/image/14-min-6.jpg');
+  background-size: 100% 60rem;
+height: 61rem;
+
+
+
+}
+
+.container_rigth{
+width: 100%;
+display:flex;
+flex-direction: column;
+flex: 1;
+justify-content: center;
+}
+.container_rigth h2{
+  font-size: 50px;
+  font-weight:bold;
+  margin-bottom: 2rem;
+  font-family: Pacifico;
+  text-shadow: 5px 3px rgba(43, 42, 42, 0.5);
+
+}
+.container_rigth form{
+  display: flex;
+  flex-direction: column;
+}
+.container_rigth .TextInput{
+
+  margin: 10px 20px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: aliceblue;
+  box-shadow: 5px 3px rgba(43, 42, 42, 0.5);
+  display: flex;
+  justify-content:center ;
+}
+.container_rigth input{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.container_rigth button{
+  height: 50px;
+  margin: 20px 20px;
+  border-radius: 10px;
+  background-color: rgb(130, 218, 253);
+  font-family: Pacifico;
+
+}
+.container_left{
+width: 100%;
+
+flex: 2;
+
+}
+
+.container_left h1 {
+  position: absolute;
+  top: 35rem;
+  left: 5rem;
+  color:#000;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Pacifico;
+
+}
+.container_left img{
+margin: 1rem;
+opacity: 0.7;
+border-radius: 10px;
+
+
+}
+.container_left p{
+  position: absolute;
+  top: 39rem;
+  left: 6rem;
+  color:#000;
+  font-size: 30px;
+  font-family: Pacifico;
+
+}
