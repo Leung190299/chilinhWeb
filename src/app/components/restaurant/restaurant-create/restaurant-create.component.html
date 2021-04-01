@@ -1,0 +1,58 @@
+<div class="container-fluid">
+  <app-menu></app-menu>
+  <div class="container_right">
+    <div class="title">Khởi tạo danh sách nhà hàng</div>
+    <div class="container">
+
+    <form [formGroup]="formGroup" (ngSubmit)="them()" style="display:flex;
+    flex-direction:column; height: 90%;" >
+      <div class="item_input">
+        <samp class="title_input">Mã nhà hàng</samp>
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="id"/>
+      </div>
+
+    </div>
+    <div class="item_input">
+      <samp class="title_input">Tên nhà hàng</samp>
+      <input type="text" class="form-control" formControlName='name' />
+    </div>
+    <div class="item_input textarea">
+      <samp class="title_input">Mô tả</samp>
+     <textarea formControlName='description' class="form-control" cols="30" rows="10"></textarea>
+    </div>
+    <div class="item_input">
+      <samp class="title_input">đia chỉ </samp>
+      <input type="text" class="form-control" formControlName='address' />
+    </div>
+    <div class="item_input">
+      <samp class="title_input">số điện thoại </samp>
+      <input type="text" class="form-control" formControlName='phone' />
+    </div>
+<div class="buttom_group" >
+    <button (click)="show=!show" type="button" class="btn" style="font-weight: bold; color: blue;" >Chọn ảnh</button>
+
+    <button type="submit" class="btn" style="font-weight: bold; color: blue;">Thêm địa danh</button>
+  </div>
+    </form >
+
+    <div *ngIf='show' class="box_image">
+     <p class="title_image">chọn ảnh tải lên</p>
+     <button (click)="show=!show" type="button" class="exit btn" >X</button>
+     <form [formGroup]="myForm" (ngSubmit)='uploadImage()'>
+     <div class="card_image">
+      <img *ngFor='let url of images'  [src]="url" height="150" width="200px" style="margin: 3px;"> <br/>
+      <button (click)='choose.click()' class="btn">chọn tải lên</button>
+    </div>
+      <input type="file" formControlName='file'
+      (change)="onFileChange($event)"
+      style=" visibility:hidden;" #choose multiple />
+
+      <button type="submit" class="btn btn-success">upload</button>
+
+
+    </form>
+    </div>
+  </div>
+      </div>
+</div>

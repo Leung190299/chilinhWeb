@@ -11,3 +11,15 @@
   src: url(./assets/font/Roboto-Medium.ttf);
   font-family: roboto;
 }
+.container-fluid{
+  display: flex;
+
+  flex-direction: row;
+  height: 60rem;
+}
+
+.container_right{
+  flex:3;
+  flex-grow: 3;
+  width: 100%;
+}

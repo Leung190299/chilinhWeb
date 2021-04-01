@@ -16,12 +16,8 @@ border: 1px black bold;
   linear-gradient(rgba(48,70,89,.6),rgba(48,70,89,.6)),
   url('../../../assets/image/14-min-6.jpg');
   background-size: 100% 60rem;
-height: 61rem;
-
-
-
+  height: 61rem;
 }
-
 .container_rigth{
 width: 100%;
 display:flex;

@@ -8,13 +8,13 @@
     <div class="container_rigth">
       <div class="box">
         <h2>Login</h2>
-        <form>
+        <form [formGroup]="formlogin" (ngSubmit)='login()' >
           <samp class="TextInput">
-            <input type="email" name="" id=""  placeholder="Nhập tài khoản"/>
+            <input type="email"  formControlName="username"  placeholder="Nhập tài khoản"/>
           </samp>
 
           <samp class="TextInput">
-            <input type="password" name="" id="" placeholder="Nhập mật khẩu" />
+            <input type="password" formControlName="password" placeholder="Nhập mật khẩu" />
           </samp>
           <button type="submit">Đăng Nhập</button>
         </form>

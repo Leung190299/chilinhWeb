@@ -1,1 +1,36 @@
-<p>restaurants works!</p>
+<div class="container-fluid">
+  <app-menu></app-menu>
+  <div class="container_right">
+<div class="title">Danh sách  nhà hàng</div>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Tên</th>
+      <th>Ảnh</th>
+      <th>Số Điện Thoại</th>
+      <th>Địa Chỉ</th>
+      <th>Chức Năng</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let item of restaurants">
+      <td scope="row">{{item.name}}</td>
+      <td><img src="{{item.image.image0}}" height="50px" width="50px"/> </td>
+      <td>{{item.phone}}</td>
+      <td>{{item.address}}</td>
+      <td><a href="#" class="btn btn-primary active" >Chi tiết</a>|<button class="btn btn-danger" (click)='dialogshow(item.id)'  >Xóa</button></td>
+
+    </tr>
+
+  </tbody>
+</table>
+<div *ngIf="xoa" class="box_delete">
+  <h3>Bạn có muốn xóa ?</h3>
+  <div class="box_butom">
+  <button class="btn" (click)="xoa=!xoa">hủy</button>
+  <button (click)='delete_item()' class="btn"> ok</button>
+</div>
+  </div>
+  </div>
+</div>
