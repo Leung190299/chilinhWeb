@@ -10,9 +10,10 @@ const routes: Routes = [
   path:'login' ,
   component:LoginComponent
 },
-{path:'', redirectTo:'/restaurant',pathMatch:'full',canActivate:[LoginGuard]},
+{path:'', redirectTo:'/restaurant',pathMatch:'full'},
 {path:'restaurant', loadChildren:()=>import('./components/restaurant/restaurant.module').then(m=>m.restaurantModule),
-canActivate:[LoginGuard]}
+canActivate:[LoginGuard]},
+{path:'hotel',loadChildren:()=>import('./components/hotel/hotel.module').then(h=>h.HotelModule),canActivate:[LoginGuard]}
 ];
 
 @NgModule({

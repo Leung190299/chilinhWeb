@@ -1,3 +1,4 @@
+
 <div class="container_left">
   <div class="logo">
     <h1>Chí linh Tour</h1>
@@ -11,8 +12,9 @@
               <p>Quản lý nhà hàng</p>
           </button>
       <div class="dropdown-menu" aria-labelledby="triggerId">
-        <a class="dropdown-item" href="#">Danh sách nhà hàng</a>
-        <a class="dropdown-item " href="#">Thêm nhà hàng</a>
+
+        <a class="dropdown-item" href="/restaurant" >Danh sách nhà hàng</a>
+        <a class="dropdown-item "[routerLink]="['/restaurant/create']" routerLinkActive="router-link-active" >Thêm nhà hàng</a>
 
       </div>
     </div>
@@ -23,8 +25,8 @@
               <p>Quản lý khách sạn</p>
           </button>
       <div class="dropdown-menu" aria-labelledby="triggerId">
-        <a class="dropdown-item" href="#">Danh sách khách sạn</a>
-        <a class="dropdown-item " href="#">Thêm khách sạn mới</a>
+        <a class="dropdown-item" [routerLink]="['/hotel']" >Danh sách khách sạn</a>
+        <a class="dropdown-item "[routerLink]="['hotel/create']">Thêm khách sạn mới</a>
 
       </div>
     </div>

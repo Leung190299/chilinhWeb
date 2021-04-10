@@ -15,28 +15,25 @@
 height:100% ;
 
 }
-.container_right{
-  width: 1200px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.listimage{
+  margin-top: 20px;
 }
-
-.container_right .container .item_input{
+.item_input{
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
 
-  padding: 20px 100px;
+  padding: 10px 100px;
 
 }
-.container_right .container .item_input .title_input{
+ .title_input{
   font-size: 20px;
   font-weight: bold;
   font-family: roboto;
   color:#333;
   text-shadow: 2px 2px #cac9c9;
+
 }
 .container_right .container .item_input input{
   height: 50px;
@@ -90,6 +87,8 @@ top: 50px;
 color:red;
 }
 .buttom_group{
-  display: flex;
-  justify-content: space-between;
+display:flex;
+
+ justify-content: space-between;
+margin: 20px;
 }

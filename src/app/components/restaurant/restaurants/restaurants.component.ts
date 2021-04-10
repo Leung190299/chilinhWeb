@@ -18,7 +18,7 @@ export class RestaurantsComponent implements OnInit,OnChanges {
   ngOnInit(): void {
     this.restaurant.getlistrestaurant().subscribe(actions => {
       actions.forEach(action => {
-        console.log(action.payload.val());
+
         this.restaurants.push(action.payload.val());
       });
     })

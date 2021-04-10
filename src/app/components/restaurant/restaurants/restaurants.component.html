@@ -1,5 +1,6 @@
 <div class="container-fluid">
-  <app-menu></app-menu>
+
+
   <div class="container_right">
 <div class="title">Danh sách  nhà hàng</div>
 <table class="table table-hover">
@@ -19,7 +20,8 @@
       <td><img src="{{item.image.image0}}" height="50px" width="50px"/> </td>
       <td>{{item.phone}}</td>
       <td>{{item.address}}</td>
-      <td><a href="#" class="btn btn-primary active" >Chi tiết</a>|<button class="btn btn-danger" (click)='dialogshow(item.id)'  >Xóa</button></td>
+      <td><a   class="btn btn-primary active" [routerLink]="['/restaurant/edit', item.id]"
+      routerLinkActive="router-link-active" >Chi tiết</a>|<button class="btn btn-danger" (click)='dialogshow(item.id)'  >Xóa</button></td>
 
     </tr>
 

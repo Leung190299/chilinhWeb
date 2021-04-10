@@ -81,15 +81,17 @@ export class RestaurantCreateComponent implements OnInit {
     .subscribe()
 
     });
+    alert('upload thành công!')
+    this.show=false;
 
-    window.location.reload();
     console.log(this.imagesURL);
   }
 
 
 them()
 {
-  this.restaurant.setrestaurant(this.formGroup.value,this.imagesURL)
+  this.restaurant.setrestaurant(this.formGroup.value,this.imagesURL);
+  window.location.reload();
 }
 
 }

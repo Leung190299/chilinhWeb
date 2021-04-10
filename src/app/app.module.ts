@@ -6,17 +6,17 @@ import { environment } from 'src/environments/environment.prod';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-
 import { LoginComponent } from './components/login/login.component';
+import { Menu1Component } from './public/menu1/menu1.component';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-
-
+    Menu1Component,
 
   ],
   imports: [
@@ -24,6 +24,7 @@ import { LoginComponent } from './components/login/login.component';
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
+
 
   ],
   providers: [],

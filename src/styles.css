@@ -18,8 +18,3 @@
   height: 60rem;
 }
 
-.container_right{
-  flex:3;
-  flex-grow: 3;
-  width: 100%;
-}
