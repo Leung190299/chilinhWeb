@@ -2,55 +2,52 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { pluck } from 'rxjs/operators';
-import { HotelService } from 'src/app/serve/hotel.service';
-interface hotel{
-id:string,
+import { EventService } from 'src/app/serve/event.service';
+interface event{
+  id:string,
   name:string,
-  address:string,
-  phone:string,
   description:string,
-  image:string[]
-
+  dateStart:string,
+  dateEnd:string,
+  image:string[],
 }
 @Component({
-  selector: 'app-hotel-edit',
-  templateUrl: './hotel-edit.component.html',
-  styleUrls: ['./hotel-edit.component.css']
+  selector: 'app-event-edit',
+  templateUrl: './event-edit.component.html',
+  styleUrls: ['./event-edit.component.css']
 })
-export class HotelEditComponent implements OnInit {
-  hotel$!:hotel;
+export class EventEditComponent implements OnInit {
+  event$!:event;
   formEit!:FormGroup;
   image:any[]=[];
   file:File[]=[];
   image2:any[]=[];
   constructor(
     private readonly route:ActivatedRoute,
-    private readonly _hotel:HotelService,
+    private readonly _event:EventService,
     private readonly form:FormBuilder
-
   ) { }
 
   ngOnInit(): void {
     this.route.params.pipe(pluck('id')).subscribe(id=>{
-      this._hotel.getDataHotel().subscribe(h=>{
-        this.hotel$=h.find(item=>item.key===id)?.payload.val();
-        this._hotel.getImage(id).snapshotChanges(['child_added']).subscribe(imgs=>{
+      this._event.getDataEvent().subscribe(e=>{
+        this.event$=e.find(item=>item.key===id)?.payload.val();
+        this._event.getImage(id).snapshotChanges(['child_added']).subscribe(imgs=>{
           imgs.forEach(item=>{
             this.image.push(item.payload.val())
           })
         })
       })
-    })
+    });
     this.formEit=this.form.group({
       id:new FormControl('',Validators.required),
       name:new FormControl('',Validators.required),
-      address:new FormControl('',Validators.required),
-      discription:new FormControl('',Validators.required),
-      phone:new FormControl('',Validators.required),
-
+      description:new FormControl('',Validators.required),
+      dateStart:new FormControl('',Validators.required),
+      dateEnd:new FormControl('',Validators.required),
     })
-
   }
+
   OnFileChange(event:any){
     if(event.target.files && event.target.files[0]){
       var count=event.target.files.length;
@@ -64,7 +61,7 @@ export class HotelEditComponent implements OnInit {
         reader.readAsDataURL(event.target.files[index]);
       }
     }
-    this._hotel.uploadImage(this.file).subscribe(a=>{
+    this._event.uploadImage(this.file).subscribe(a=>{
       this.image2=a;
      for (let index = 0; index < a.length; index++) {
        const element = a[index];
@@ -73,8 +70,9 @@ export class HotelEditComponent implements OnInit {
 
     })
 };
+
 edit(){
-  this._hotel.updateDataHotel(this.hotel$,this.image2);
+  this._event.updateDataEvent(this.event$,this.image2);
   window.location.reload();
 }
 }

@@ -13,7 +13,11 @@ const routes: Routes = [
 {path:'', redirectTo:'/restaurant',pathMatch:'full'},
 {path:'restaurant', loadChildren:()=>import('./components/restaurant/restaurant.module').then(m=>m.restaurantModule),
 canActivate:[LoginGuard]},
-{path:'hotel',loadChildren:()=>import('./components/hotel/hotel.module').then(h=>h.HotelModule),canActivate:[LoginGuard]}
+{path:'hotel',loadChildren:()=>import('./components/hotel/hotel.module').then(h=>h.HotelModule),canActivate:[LoginGuard]},
+{path:'event',loadChildren:()=>import('./components/event/event.module').then(e=>e.EventModule),canActivate:[LoginGuard]},
+{path:'sightsee',loadChildren:()=>import('./components/sightsee/sightsee.module').then(e=>e.SightseeModule),canActivate:[LoginGuard]},
+{path:'shop',loadChildren:()=>import('./components/shop/shop.module').then(s=>s.ShopModule),canActivate:[LoginGuard]}
+
 ];
 
 @NgModule({

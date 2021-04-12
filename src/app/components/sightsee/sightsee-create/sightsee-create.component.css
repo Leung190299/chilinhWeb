@@ -1,0 +1,95 @@
+.container_right .title{
+  width: 100%;
+  height: 80px;
+  background-color: rgb(68, 68, 248);
+  font-family: roboto;
+  font-size: 40px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-self:center;
+  color: aliceblue;
+}
+.container{
+  background-color:#EAE9E9 ;
+height:100% ;
+
+}
+.container_right{
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container_right .container .item_input{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 100px;
+
+}
+.container_right .container .item_input .title_input{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: roboto;
+  color:#333;
+  text-shadow: 2px 2px #cac9c9;
+}
+.container_right .container .item_input input{
+  height: 50px;
+
+}
+.box_image{
+  position: absolute;
+  height:600px;
+  flex-direction: column;
+  display:flex;
+  justify-content: center;
+width: 900px;
+background-color: rgba(189, 189, 189, 0.575);
+top: 50px;
+
+}
+.box_image .title_image{
+  position: absolute;
+  display:flex;
+
+  font-size: 20px;
+  font-family: roboto;
+  top: 30px;
+  left: 400px;
+  font-weight: bold;
+}
+.box_image form{
+  display:flex;
+  flex-direction: column;
+
+}
+.card_image{
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  border: black;
+  border-style: dotted;
+  border-width: 2px;
+}
+.card_image .btn{
+  position: absolute;
+  bottom: 130px;
+  left: 400px;
+
+
+}
+.box_image .exit{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+color:red;
+}
+.buttom_group{
+  display: flex;
+  justify-content: space-between;
+}

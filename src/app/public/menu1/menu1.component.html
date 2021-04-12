@@ -26,7 +26,7 @@
           </button>
       <div class="dropdown-menu" aria-labelledby="triggerId">
         <a class="dropdown-item" [routerLink]="['/hotel']" >Danh sách khách sạn</a>
-        <a class="dropdown-item "[routerLink]="['hotel/create']">Thêm khách sạn mới</a>
+        <a class="dropdown-item "[routerLink]="['/hotel/create']">Thêm khách sạn mới</a>
 
       </div>
     </div>
@@ -34,11 +34,11 @@
       <button class="btn btn-secondary " type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
             <img src="../../../assets/image/influencer.png" alt=""/>
-              <p>Quản lý quảng cáo</p>
+              <p>Quản lý Sự Kiện</p>
           </button>
       <div class="dropdown-menu" aria-labelledby="triggerId">
-        <a class="dropdown-item" href="#">Danh sách quản cáo</a>
-        <a class="dropdown-item " href="#">Thêm quảng cáo mới</a>
+        <a class="dropdown-item" [routerLink]="['/event']">Danh sách Sự kiện </a>
+        <a class="dropdown-item " [routerLink]="['/event/create']">Thêm Sự Kiện</a>
 
       </div>
     </div>
@@ -49,8 +49,20 @@
               <p>Quản lý địa điểm tham quan</p>
           </button>
       <div class="dropdown-menu" aria-labelledby="triggerId">
-        <a class="dropdown-item" href="#">Danh sách tham quan</a>
-        <a class="dropdown-item " href="#">Thêm địa điểm mới</a>
+        <a class="dropdown-item" [routerLink]="['/sightsee']">Danh sách tham quan</a>
+        <a class="dropdown-item " [routerLink]="['/sightsee/create']">Thêm địa điểm mới</a>
+
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-secondary " type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+            <img src="../../../assets/image/location.png" alt=""/>
+              <p>Quản lý địa điểm Mua Sắm</p>
+          </button>
+      <div class="dropdown-menu" aria-labelledby="triggerId">
+        <a class="dropdown-item" [routerLink]="['/shop']">Danh sách Địa Điểm Mua Sắm</a>
+        <a class="dropdown-item " [routerLink]="['/shop/create']">Thêm địa điểm mới</a>
 
       </div>
     </div>

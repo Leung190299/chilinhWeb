@@ -1,0 +1,27 @@
+.box_delete{
+  position: absolute;
+  height:200px;
+  flex-direction: column;
+  display:flex;
+
+width: 400px;
+background-color: rgba(189, 189, 189, 0.575);
+top: 30%;
+left: 50%;
+
+}
+.container_right{
+  width: 1200px;
+}
+.box_delete h3{
+  display: flex;
+  margin-top: 60px;
+  justify-content: center;
+}
+.box_delete .box_butom{
+  display: flex;
+  width: 100%;
+padding: 50px;
+  justify-content: space-between;
+}
+

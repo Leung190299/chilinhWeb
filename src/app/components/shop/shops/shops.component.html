@@ -1,0 +1,37 @@
+<div class="container-fluid">
+
+  <div class="container_right">
+<div class="title">Danh sách  nhà hàng</div>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Tên</th>
+      <th>Ảnh</th>
+      <th>Số Điện Thoại</th>
+      <th>Địa Chỉ</th>
+      <th>Chức Năng</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let item of shops">
+      <td scope="row">{{item.name}}</td>
+      <td><img src="{{item.image.image0}}" height="50px" width="50px"/> </td>
+      <td>{{item.phone}}</td>
+      <td>{{item.address}}</td>
+      <td><a   class="btn btn-primary active" [routerLink]="['/hotel/edit', item.id]"
+      routerLinkActive="router-link-active" >Chi tiết</a>|<button class="btn btn-danger" (click)='dialogshow(item.id)'  >Xóa</button></td>
+
+    </tr>
+
+  </tbody>
+</table>
+<div *ngIf="show" class="box_delete">
+  <h3>Bạn có muốn xóa ?</h3>
+  <div class="box_butom">
+  <button class="btn" (click)="show=!show">hủy</button>
+  <button (click)='delete_item()' class="btn"> ok</button>
+</div>
+  </div>
+  </div>
+</div>
