@@ -19,6 +19,7 @@ import { Menu1Component } from './public/menu1/menu1.component';
     Menu1Component,
 
 
+
   ],
   imports: [
     BrowserModule,

@@ -6,9 +6,9 @@ import { SightseeService } from 'src/app/serve/sightsee.service';
 interface sightsee{
   id:string,
   name:string,
+  address:string,
   description:string,
-  dateStart:string,
-  dateEnd:string,
+  email:string,
   image:string[],
 }
 @Component({
@@ -42,9 +42,10 @@ export class SightseeEditComponent implements OnInit {
     this.formEit=this.form.group({
       id:new FormControl('',Validators.required),
       name:new FormControl('',Validators.required),
+      address:new FormControl('',Validators.required),
       description:new FormControl('',Validators.required),
-      dateStart:new FormControl('',Validators.required),
-      dateEnd:new FormControl('',Validators.required),
+      email:new FormControl('',Validators.required),
+
     })
   }
 

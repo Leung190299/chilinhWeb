@@ -1,0 +1,37 @@
+<div class="container-fluid">
+
+  <div class="container_right">
+    <div class="title">Khởi tạo danh sách Tour</div>
+    <div class="container">
+
+    <form [formGroup]="formGroup" (ngSubmit)="them()" style="display:flex;
+    flex-direction:column; height: 90%;" >
+      <div class="item_input">
+        <samp class="title_input">Mã Tour</samp>
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="id" />
+      </div>
+
+    </div>
+    <div class="item_input">
+      <samp class="title_input"> Số Ngày đi</samp>
+      <input type="text" class="form-control" formControlName='ngay' />
+    </div>
+    <div class="item_input">
+      <samp class="title_input">Số Điện thoại liên hệ</samp>
+      <input type="text" class="form-control" formControlName='phone' />
+    </div>
+    <div class="item_input">
+      <samp class="title_input">Giá Tour</samp>
+      <input type="text" class="form-control" formControlName='gia' />
+    </div>
+    <div class="item_input textarea">
+      <samp class="title_input">Lộ Trình</samp>
+     <textarea formControlName='lotrinh' class="form-control" cols="30" rows="10"></textarea>
+    </div>
+
+    <div class="buttom_group" >
+
+      <button type="submit" class="btn" style="font-weight: bold; color: blue;">Thêm </button>
+    </div>
+

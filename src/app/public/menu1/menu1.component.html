@@ -66,5 +66,17 @@
 
       </div>
     </div>
+    <div class="dropdown">
+      <button class="btn btn-secondary " type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+            <img src="../../../assets/image/location.png" alt=""/>
+              <p>Quản lý Tour</p>
+          </button>
+      <div class="dropdown-menu" aria-labelledby="triggerId">
+        <a class="dropdown-item" [routerLink]="['/tour']">Danh sách tour</a>
+        <a class="dropdown-item " [routerLink]="['/tour/create']">Thêm  mới</a>
+
+      </div>
+    </div>
   </div>
 </div>

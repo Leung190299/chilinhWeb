@@ -23,9 +23,9 @@ export class SightseeCreateComponent implements OnInit {
     this.formGroup=this.fb.group({
       id:new FormControl('',Validators.required),
       name:new FormControl('',Validators.required),
+      address:new FormControl('',Validators.required),
       description:new FormControl('',Validators.required),
-      dateStart:new FormControl('',Validators.required),
-      dateEnd:new FormControl('',Validators.required),
+      email:new FormControl('',Validators.required),
 
     })
     this.myForm=this.fb.group({

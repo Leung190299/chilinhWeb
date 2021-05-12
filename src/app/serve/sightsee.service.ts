@@ -6,9 +6,9 @@ import { finalize } from 'rxjs/operators';
 interface sightsee{
   id:string,
   name:string,
+  address:string,
   description:string,
-  dateStart:string,
-  dateEnd:string,
+
   image:string[],
 }
 @Injectable({

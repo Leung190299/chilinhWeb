@@ -1,20 +1,20 @@
 <div class="container-fluid">
 
   <div class="container_right">
-    <div class="title">Khởi tạo danh sách nhà hàng</div>
+    <div class="title">Khởi tạo danh sách shop</div>
     <div class="container">
 
     <form [formGroup]="formGroup" (ngSubmit)="them()" style="display:flex;
     flex-direction:column; height: 90%;" >
       <div class="item_input">
-        <samp class="title_input">Mã nhà hàng</samp>
+        <samp class="title_input">Mã shop</samp>
       <div class="form-group">
         <input type="text" class="form-control" formControlName="id" />
       </div>
 
     </div>
     <div class="item_input">
-      <samp class="title_input">Tên nhà hàng</samp>
+      <samp class="title_input">Tên shop</samp>
       <input type="text" class="form-control" formControlName='name' />
     </div>
     <div class="item_input textarea">
