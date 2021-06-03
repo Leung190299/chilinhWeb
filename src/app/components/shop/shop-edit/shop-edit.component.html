@@ -1,1 +1,55 @@
-<p>shop-edit works!</p>
+
+
+
+<ng-container *ngIf="shop$">
+  <div class="container_right">
+  <form [formGroup]="formEit" style="display:flex;flex-direction:column; height: 90%;" (ngSubmit)="edit()" >
+      <div class="item_input" >
+        <samp class="title_input">Mã nhà shop</samp>
+      <div class="form-group">
+        <input type="text" class="form-control"  formControlName="id" [(ngModel)]="shop$.id" />
+      </div>
+
+    </div>
+    <div class="item_input">
+      <samp class="title_input">Tên nhà Shop</samp>
+      <input type="text" class="form-control" formControlName='name' [(ngModel)]="shop$.name" />
+    </div>
+    <div class="item_input textarea">
+      <samp class="title_input">Mô tả</samp>
+     <textarea formControlName='description' class="form-control" cols="30" rows="10" [(ngModel)]="shop$.description" ></textarea>
+    </div>
+    <div class="item_input">
+      <samp class="title_input">đia chỉ </samp>
+      <input type="text" class="form-control" formControlName='address' [(ngModel)]="shop$.address" />
+    </div>
+    <div class="item_input">
+      <samp class="title_input">số điện thoại </samp>
+      <input type="text" class="form-control" formControlName='phone' [(ngModel)]="shop$.phone" />
+    </div>
+    <div class="item_input">
+      <samp class="title_input">Email </samp>
+      <input type="text" class="form-control" formControlName='email' [(ngModel)]="shop$.email" />
+    </div>
+    <div class="item_input">
+      <samp class="title_input">Ảnh địa danh </samp>
+    <div class="listimage">
+
+    <img *ngFor="let url of image " [src]="url" style="height: 200px;height:200px; margin-right:10px; margin-top: 10px;" />
+  </div>
+    </div>
+
+<div class="buttom_group" >
+
+  <input hidden type="file" multiple (change)="OnFileChange($event)" #chooe />
+  <button type="button" class="btn " (click)="chooe.click()" style="background-color:rgb(49, 86, 250);font-weight: bold; color: rgb(255, 255, 255);">Thay đổi ảnh</button>
+
+    <button type="submit" class="btn " style="background-color:rgb(49, 86, 250);font-weight: bold; color: rgb(255, 255, 255);">Chỉnh sửa</button>
+  </div>
+    </form >
+
+  </div>
+
+</ng-container>
+
+

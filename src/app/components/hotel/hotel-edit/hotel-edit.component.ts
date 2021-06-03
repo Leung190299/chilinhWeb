@@ -45,7 +45,7 @@ export class HotelEditComponent implements OnInit {
       id:new FormControl('',Validators.required),
       name:new FormControl('',Validators.required),
       address:new FormControl('',Validators.required),
-      discription:new FormControl('',Validators.required),
+      description:new FormControl('',Validators.required),
       phone:new FormControl('',Validators.required),
 
     })

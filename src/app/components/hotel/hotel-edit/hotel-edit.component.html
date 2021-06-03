@@ -5,14 +5,14 @@
   <div class="container_right">
   <form [formGroup]="formEit" style="display:flex;flex-direction:column; height: 90%;" (ngSubmit)="edit()" >
       <div class="item_input" >
-        <samp class="title_input">Mã nhà hàng</samp>
+        <samp class="title_input">Mã nhà nghỉ</samp>
       <div class="form-group">
         <input type="text" class="form-control" formControlName="id" [(ngModel)]="hotel$.id" />
       </div>
 
     </div>
     <div class="item_input">
-      <samp class="title_input">Tên nhà hàng</samp>
+      <samp class="title_input">Tên nhà nghỉ</samp>
       <input type="text" class="form-control" formControlName='name' [(ngModel)]="hotel$.name" />
     </div>
     <div class="item_input textarea">

@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
   <div class="container_right">
-<div class="title">Danh sách  nhà hàng</div>
+<div class="title">Danh sách shop</div>
 <table class="table table-hover">
   <thead>
     <tr>
@@ -19,7 +19,7 @@
       <td><img src="{{item.image.image0}}" height="50px" width="50px"/> </td>
       <td>{{item.phone}}</td>
       <td>{{item.address}}</td>
-      <td><a   class="btn btn-primary active" [routerLink]="['/hotel/edit', item.id]"
+      <td><a   class="btn btn-primary active" [routerLink]="['/shop/edit', item.id]"
       routerLinkActive="router-link-active" >Chi tiết</a>|<button class="btn btn-danger" (click)='dialogshow(item.id)'  >Xóa</button></td>
 
     </tr>
